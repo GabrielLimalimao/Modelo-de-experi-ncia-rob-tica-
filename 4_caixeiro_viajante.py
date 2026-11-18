@@ -1,27 +1,4 @@
-"""Parte 4 evoluída: classificador de área de atendimento (estilo iFood).
-
-Baseado em ``aulas/aula_13_treinamento_pytorch/4_caixeiro_viajante.py`` do
-repositório renatoaloi/Curso-Python-IA-AloiTech (Aula 13 do PythonIA do Zero).
-
-O que mudou em relação ao script original:
-  1. Dataset sintético com cientos de pontos e rótulos geometricamente corretos
-     (dentro/fora de um raio de 3 km), com um pouco de ruído realista.
-  2. Latitude/longitude são convertidas para km locais antes de entrar na rede,
-     em vez de min-max direto nas coordenadas brutas.
-  3. Separação treino/validação, semente fixa, early stopping e métricas
-     (acurácia, precisão e recall).
-  4. O modelo treinado é salvo em ``area_atendimento.pt`` junto com a media e
-     o desvio usados na normalização.
-  5. A classe ``ClassificadorAreaAtendimento`` permite reutilizar o modelo
-     depois, sem treinar de novo — pronta para ser chamada por uma API.
-  6. Flag ``--plot`` gera a fronteira de decisão (matplotlib opcional).
-
-Uso:
-    python 4_caixeiro_viajante.py
-    python 4_caixeiro_viajante.py --recarregar
-    python 4_caixeiro_viajante.py --plot
-"""
-
+ 
 from __future__ import annotations
 
 import argparse
